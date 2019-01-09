@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.lh.persistence">
+	<class name="Supplier" lazy="false" table="tb_supplier_info">
+		<!-- 主键 -->
+		<id name="id">
+			<generator class="native"/>
+		</id>
+		<property name="supplierno" not-null="true" length="20"/>
+		<property name="suppliername" not-null="true" length="50"/>
+		<property name="contactperson" not-null="true" length="20"/>
+		<property name="contacttel" not-null="true" length="50"/>
+		<property name="contactaddress" not-null="true" length="200"/>
+		<property name="remark" not-null="false" length="500"/>
+	</class>
+</hibernate-mapping>
